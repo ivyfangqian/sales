@@ -1,6 +1,7 @@
 package com.fqivy.sales.service.impl;
 
 import com.fqivy.sales.dataobject.ProductInfo;
+import com.fqivy.sales.enums.ProductStatusEnum;
 import com.fqivy.sales.repository.ProductInfoRepository;
 import com.fqivy.sales.service.ProductInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,8 @@ public class ProductInfoServiceImpl implements ProductInfoService {
     }
 
     @Override
-    public List<ProductInfo> findByProductStatus(Integer productStatus) {
-        return repository.findByProductStatus(productStatus);
+    public List<ProductInfo> findUpAll() {
+        return repository.findByProductStatus(ProductStatusEnum.UP.getCode());
     }
 
     @Override

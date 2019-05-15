@@ -2,6 +2,7 @@ package com.fqivy.sales.service;
 
 import com.fqivy.sales.dataobject.ProductInfo;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 public interface ProductInfoService {
@@ -10,7 +11,7 @@ public interface ProductInfoService {
 
     List<ProductInfo> findAll();
 
-    List<ProductInfo> findByProductStatus(Integer productStatus);
+    List<ProductInfo> findUpAll();
 
     ProductInfo save(ProductInfo productInfo);
 }
